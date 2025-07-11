@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!--titulo-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="🌱Monitoramento de horta🌱"
+            android:textColor="#2e7d33"
+            android:textSize="25sp" />
+
+        <!-- SpeedViews-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- SpeedView Temperatura -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌡️ Temperatura"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewTemperatura"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:sv_speedTextSize="12sp"
+                    app:sv_unitTextSize="10sp"
+                    app:sv_unit="°C"
+                    app:sv_startDegree="145"
+                    app:sv_endDegree="395"
+                    app:sv_speedometerWidth="12dp"
+                    app:sv_indicatorWidth="5dp"
+                    app:sv_centerCircleRadius="0dp"
+                    />
+
+            </LinearLayout>
+
+            <!-- SpeedView Umidade Ar -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Umidade Ar"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewUmidadeAr"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:sv_speedTextSize="12sp"
+                    app:sv_unitTextSize="8sp"
+                    app:sv_unit="%"
+                    app:sv_startDegree="145"
+                    app:sv_endDegree="395"
+                    app:sv_speedometerWidth="12dp"
+                    app:sv_indicatorWidth="5dp"
+                    app:sv_centerCircleRadius="0dp"
+                    />
+
+            </LinearLayout>
+
+            <!-- SpeedView Umidade Solo -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌱 Umidade Solo"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/speedViewUmidadeSolo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:sv_speedTextSize="12sp"
+                    app:sv_unitTextSize="8sp"
+                    app:sv_unit="%"
+                    app:sv_startDegree="145"
+                    app:sv_endDegree="395"
+                    app:sv_speedometerWidth="12dp"
+                    app:sv_indicatorWidth="5dp"
+                    app:sv_centerCircleRadius="0dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--layout da conexão-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#1976D2"
+                android:text="Conectar Dispositivo"
+                android:textSize="16sp"
+                app:cornerRadius="4dp"
+                app:icon="@drawable/ic_bluetooth"
+                app:iconGravity="textStart" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Desconectado"
+                android:textColor="#f20707" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGerenciarHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#e6bd09"
+                android:text="Adicionar e Gerenciar horário"
+                android:textSize="16sp"
+                app:cornerRadius="4dp"
+                app:icon="@drawable/ic_relogio"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gráfico de temperatura anual"
+            android:textSize="20sp"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
