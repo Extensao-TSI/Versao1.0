@@ -6,10 +6,10 @@
     android:padding="24dp">
 
     <TextView
-        android:id="@+id/textViewTituloLista"
+        android:id="@+id/textViewTituloEditar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lista de Horários"
+        android:text="Editar Horário"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#1976D2"
@@ -17,30 +17,29 @@
         android:gravity="center"/>
 
     <Button
-        android:id="@+id/btnAdicionarHorario"
+        android:id="@+id/btnEditarHorarioInicial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Adicionar Novo Horário"
+        android:text="Selecionar Horário Inicial"
         android:backgroundTint="#1976D2"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/textViewSemHorariosCadastrados"
+    <Button
+        android:id="@+id/btnEditarHorarioFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nenhum horário cadastrado"
-        android:textSize="18sp"
-        android:textColor="#888888"
-        android:gravity="center"
-        android:visibility="gone"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:text="Selecionar Horário Final"
+        android:backgroundTint="#1976D2"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewHorarios"
+    <Button
+        android:id="@+id/btnSalvarEdicaoHorario"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="wrap_content"
+        android:text="Salvar Alterações"
+        android:backgroundTint="#388E3C"
+        android:textColor="#FFFFFF"/>
 
-</LinearLayout>
+</LinearLayout> 

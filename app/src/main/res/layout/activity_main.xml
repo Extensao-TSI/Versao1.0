@@ -183,13 +183,18 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGerenciarHorario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#e6bd09"
-                android:text="Adicionar e Gerenciar horário"
-                android:textSize="16sp"
-                app:cornerRadius="4dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#FFD600"
+                android:text="ADICIONAR E GERENCIAR HORÁRIOS"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                app:cornerRadius="12dp"
                 app:icon="@drawable/ic_relogio"
-                app:iconGravity="textStart" />
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                app:iconPadding="16dp"
+                />
 
         </LinearLayout>
 

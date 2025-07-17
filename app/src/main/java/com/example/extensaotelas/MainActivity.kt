@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         //instanciar o bd
         val db = Room.databaseBuilder(
             applicationContext,
-            AppDatabase::class.java, "database-name"
+            AppDatabase::class.java, "horta_monitoramento"
         ).build()
 
         val btnGerenciarHorario = findViewById<MaterialButton>(R.id.btnGerenciarHorario)
